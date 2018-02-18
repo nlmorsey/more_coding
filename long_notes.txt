@@ -1,0 +1,28 @@
+# If the optional code block {|f| is given, it will be passed to the opened file as an argument and the File object will automatically be closed when the block terminates.
+# A method call is 'method.call(arguments)' e.g. invokes the method with the specified arguments, returning the method's return value.
+# Blocks are chunks of code between braces [] or between do...end
+
+'::new'
+f = File.new("filename")
+
+'File.open'
+f = File.open("filename")
+
+f = File.new("testfile")
+f.read(16) #=> "This is line one"
+
+open("file") {|f|
+    data = f.read # This returns a string even if the file is empty.
+}
+
+open("fixed-record-file") {|f|
+    while record = f.read (256)
+end
+}
+
+open("variable-record-file") {|f|
+    while len = f.read(4)
+        len = len.unpack("N")[0] # 32-bit length
+        record = f.read(len) # This returns a string even if len is 0.
+    end
+}

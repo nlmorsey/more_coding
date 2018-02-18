@@ -1,0 +1,17 @@
+1. Break down line by line what each expression does:
+    a. Break down each expression as if you were the computer evaluating it.
+    b. Add comments on every line explaining what each expression and symbol does.
+2. It is important to differentiate between:
+    a. Declaring what arguments a method takes
+    b. Giving the method arguments
+    c. Because normally you "give" a method arguments when you call it
+    d. And you "define" or "declare" a method's arguments when you define it
+3. There are two actions you can take with a given method:
+    a. You can "call" it, which executes the body of the method with the data provided it via its arguments.
+    b. You can "define" a method, which is where you name it, say which arguments it is allowed to take, and provide it with a body of code to execute when called.
+4. Challenges:
+    a. Can you make it print three arguments instead of two?
+    b. Can you do it without the splat operator?
+5. Work on bigger things, as opposed the small things
+    a. Get new data to refine your mental model
+    b. Don't get hung up on vocabulary as opposed to seeing what happens with code.

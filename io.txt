@@ -1,0 +1,40 @@
+I couldn't find method 'read' or method 'seek' when I tried searching for 'file."
+
+I knew that the argument was a file. I knew because I used 'p' inside of the method, e.g. 'p f' or 'p f.class'
+
+It returned: 'File' and 'test.txt'
+
+So I thought that ruby docs would have documentation about 'file' methods 'read' and 'seek'
+
+Nope. The correct place to look is Class:IO
+
+Ruby Docs says: "The IO class is the basis for all input and output in Ruby. Many of the examples in this section use the File class, the only standard subclass of IO."
+
+"The global constant ARGF (also accessible as $<) provides an IO-like stream which allows access to all files mentioned on the command line (or STDIN if no files are mentioned). 
+    ARGF#path and its alias ARGF#filename are provided to access the name of the file currently being read."
+    
+Zee says, "File inherits from IO
+(Inheritance is when a class has some of it's methods defined by another class, generally called the "parent" class)
+if you go here: http://www.rubydoc.info/stdlib/core/File
+You'll see a section that says 'Inherits"
+(use ctrl+f to find it)
+and it will link back to the class File inherits from"
+
+.read([length [, outbuf]]} => string, outbuf, or nil
+f.read(16)
+
+What is outbuf?
+*It is optional
+*It is an argument
+*It must reference a String
+*The String will receive the data
+*The outbuf will contain only the received data after the method called
+*The outbuf will contain only the above, even if it's not empty at the beginning
+
+What is length?
+*They are bytes from the I/O stream
+*It must be a non-negative integer or 'nil'
+*If a positive integer, reads in binary
+*Returns 'nil' or a string same as length bytes
+*If 'length' is omitted, it reads until EOF
+*If 'length' is zero, it returns ""

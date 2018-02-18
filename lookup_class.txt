@@ -1,0 +1,5 @@
+https://ruby-doc.org/core-2.0.0/File.html
+
+https://ruby-doc.org/core-2.0.0/IO.html
+
+Look at Parent: ___.
